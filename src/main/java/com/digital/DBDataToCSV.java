@@ -16,8 +16,8 @@ public class DBDataToCSV {
         Long startTime = System.currentTimeMillis();
 
         String jdbcUrl = "jdbc:mysql://localhost:3306/db03";
-        String user = "root";
-        String password = "";
+        String user = "user";
+        String password = "user";
         String csvFilePath = "people2.csv"; // Output CSV file
 
         int totalRecords = 10_000_000; // Total records to fetch from DB

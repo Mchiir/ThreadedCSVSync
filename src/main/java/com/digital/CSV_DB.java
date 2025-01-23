@@ -29,9 +29,9 @@ public class CSV_DB {
     // Data insertion completed. Total Records Inserted: 10_000_000
     // Time taken: 5 minutes and 43 seconds.
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/db03";
-    private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/db03"; // change DB name, here I used 'db03'
+    private static final String DB_USER = "user";
+    private static final String DB_PASSWORD = "user";
 
     private static final String CSV_FILE = "people2.csv";
     private static final int THREAD_COUNT = 10; // Number of threads
