@@ -11,14 +11,14 @@ import java.util.concurrent.TimeUnit;
 
 public class DBDataToCSV {
     public static void main(String[] args) {
-//        Total time for Multi-threaded reading and writing: 75845 ms,
-        // thus 1.2640 minutes
+        // Total time for Multi-threaded reading and writing: 184204 ms,
+        // thus 3.0 min
         Long startTime = System.currentTimeMillis();
 
-        String jdbcUrl = "jdbc:mysql://localhost:3306/db03";
+        String jdbcUrl = "jdbc:mysql://localhost:3306/db04";
         String user = "user";
         String password = "user";
-        String csvFilePath = "people2.csv"; // Output CSV file
+        String csvFilePath = "advanced.csv"; // Output CSV file
 
         int totalRecords = 10_000_000; // Total records to fetch from DB
         int numThreads = 4; // Use 4 threads for multi-threading
