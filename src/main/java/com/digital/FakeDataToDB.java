@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 public class FakeDataToDB {
     public static void main(String[] args) {
+        // Total time for Multi-threaded data insertion: 1111282 ms,
+        // thus 18.5 min
         long startTime = System.currentTimeMillis();
 
         String jdbcUrl = "jdbc:mysql://localhost:3306/db04";
@@ -64,7 +66,7 @@ class InsertDataTask implements Runnable {
         try (Connection connection = DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPassword)) {
             connection.setAutoCommit(false); // Disable auto-commit for performance improvement
             Faker faker = new Faker();
-            String insertSQL = "INSERT INTO people2 (name, email, address, age) VALUES (?, ?, ?, ?)";
+            String insertSQL = "INSERT INTO people4 (name, email, address, age) VALUES (?, ?, ?, ?)";
 
             try (PreparedStatement statement = connection.prepareStatement(insertSQL)) {
                 int batchCount = 0;
